@@ -1,218 +1,215 @@
 function App() {
   return (
-    <div className="bg-[#060e1a] text-white">
+    <div className="bg-[#061408] text-white font-[Jost]">
 
-      {/* GOLD RULE */}
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
+      {/* TOP GREEN RULE */}
+      <div className="h-[3px] bg-gradient-to-r from-transparent via-green-700 to-transparent"></div>
 
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-50 flex flex-col md:flex-row justify-between md:items-center px-4 md:px-12 py-4 bg-[#060e1a]/95 border-b border-yellow-700/20">
-        <div>
-          <h1 className="text-lg md:text-2xl font-serif font-bold tracking-[4px] md:tracking-[6px] bg-gradient-to-r from-yellow-700 via-yellow-300 to-yellow-700 bg-clip-text text-transparent">
-            Landmark Real Estate Developers
-          </h1>
-          <p className="text-[8px] md:text-[9px] tracking-[3px] md:tracking-[5px] text-yellow-600/60">
-            Real Estates Properties
-          </p>
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 backdrop-blur bg-[#061408]/95 border-b border-green-700/30 flex items-center justify-between px-4 md:px-12 h-20">
+
+        {/* LOGO */}
+        <div className="flex items-center gap-3">
+          {/* SVG */}
+          <svg width="42" height="42" viewBox="0 0 52 52">
+            <circle cx="26" cy="26" r="25" fill="#0d2410" stroke="#2e7d32"/>
+            <rect x="10" y="20" width="9" height="22" fill="#2e7d32"/>
+            <rect x="21" y="12" width="10" height="30" fill="#43a047"/>
+            <rect x="33" y="24" width="9" height="18" fill="#2e7d32"/>
+          </svg>
+
+          <div>
+            <h1 className="font-[Playfair_Display] text-sm md:text-lg font-bold">
+              <span className="text-green-400">Land Mark</span> Real Estate
+            </h1>
+            <p className="text-[8px] tracking-[3px] text-green-300/60 uppercase">
+              Developers · Port Harcourt
+            </p>
+          </div>
         </div>
 
-        <nav className="flex flex-wrap gap-4 mt-3 md:mt-0 text-[10px] md:text-[11px] uppercase tracking-[2px]">
-          {["Buy", "Sell", "Rent", "Invest"].map((item) => (
-            <a key={item} className="text-white/50 hover:text-yellow-400">
-              {item}
-            </a>
-          ))}
-          <button className="bg-yellow-500 px-4 py-1 md:px-5 md:py-2 text-[#060e1a] font-semibold">
+        {/* NAV */}
+        <nav className="hidden md:flex items-center gap-6 text-xs tracking-widest uppercase">
+          <a href="#">Buy</a>
+          <a href="#">Sell</a>
+          <a href="#">Rent</a>
+          <a href="#">Invest</a>
+
+          <a
+            href="https://www.instagram.com/landmarkrealestatedevelopers"
+            target="_blank"
+            className="border border-green-400/30 px-3 py-2 flex items-center gap-2 hover:bg-green-800/30"
+          >
+            Instagram
+          </a>
+
+          <a className="bg-green-700 px-4 py-2 hover:bg-green-500">
             Book a Visit
-          </button>
+          </a>
         </nav>
       </header>
 
+      {/* IG BANNER */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-3 px-4 py-3 text-xs bg-[#0d2410] border-y border-green-700/20">
+        <span className="text-white/60 text-center">
+          Follow us for latest listings —
+        </span>
+        <a
+          href="https://www.instagram.com/landmarkrealestatedevelopers"
+          target="_blank"
+          className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 text-white text-xs"
+        >
+          @landmarkrealestatedevelopers
+        </a>
+      </div>
+
       {/* HERO */}
-      <section className="relative h-[80vh] md:h-[92vh] min-h-[500px] overflow-hidden">
+      <section className="relative h-[85vh] min-h-[600px]">
         <img
           src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=85&fit=crop"
-          className="w-full h-full object-cover brightness-[0.55]"
+          className="w-full h-full object-cover brightness-50"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-br from-[#060e1a]/80 via-[#060e1a]/40 to-[#060e1a]/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-green-900/40"></div>
 
-        <div className="absolute inset-0 flex flex-col justify-end px-4 md:px-16 pb-10 md:pb-20 max-w-[720px]">
-          <div className="bg-yellow-500 text-[#060e1a] text-[9px] md:text-[10px] tracking-[3px] px-3 md:px-4 py-1 w-fit mb-4 md:mb-6">
-            Premium Development · Port Harcourt
+        <div className="absolute bottom-16 px-6 md:px-16 max-w-xl">
+          <div className="bg-green-700 text-xs px-3 py-1 mb-4 inline-block">
+            Premium Development · Nigeria
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black font-serif leading-tight mb-4 md:mb-5">
-            Building <em className="text-yellow-300 italic">Dreams</em><br />
-            Into Reality
+          <h1 className="font-[Playfair_Display] text-3xl md:text-6xl font-bold">
+            Building <span className="text-green-300 italic">Dreams</span>
+            <br /> Into Reality
           </h1>
 
-          <p className="text-white/70 text-sm md:text-base leading-6 md:leading-7 mb-6 md:mb-9 max-w-[500px]">
-            From groundbreaking to handover — Landmark Real Estate Developers delivers world-class
-            residential and commercial properties across Nigeria.
+          <p className="text-white/70 mt-4 text-sm leading-relaxed">
+            Delivering world-class residential and commercial properties across Nigeria.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-            <button className="bg-yellow-500 text-[#060e1a] px-6 md:px-8 py-3 text-xs tracking-[2px] font-semibold">
+          <div className="flex flex-wrap gap-4 mt-6">
+            <button className="bg-green-700 px-6 py-3 text-xs uppercase">
               Explore Properties
             </button>
-            <button className="border border-white/30 px-6 md:px-8 py-3 text-xs tracking-[2px]">
-              View Our Sites
+            <button className="border px-6 py-3 text-xs uppercase">
+              View Instagram
             </button>
           </div>
         </div>
       </section>
 
       {/* STATS */}
-      <div className="grid grid-cols-2 md:grid-cols-4 bg-[#0e1f38] border-y border-yellow-700/20">
+      <div className="grid grid-cols-2 md:grid-cols-4 text-center border-y border-green-700/20">
         {[
-          ["340+", "Properties Delivered"],
-          ["12", "Active Build Sites"],
-          ["₦4.2B", "Portfolio Value"],
-          ["98%", "Client Satisfaction"],
-        ].map(([num, label]) => (
-          <div key={label} className="text-center py-5 md:py-7 border border-yellow-700/10">
-            <span className="block text-xl md:text-3xl font-serif text-yellow-500 font-bold">
-              {num}
-            </span>
-            <span className="text-[9px] md:text-[10px] text-white/40 tracking-[2px] uppercase">
-              {label}
-            </span>
+          ["340+", "Properties"],
+          ["12", "Sites"],
+          ["₦4.2B", "Portfolio"],
+          ["98%", "Satisfaction"],
+        ].map((s, i) => (
+          <div key={i} className="py-6 border-r last:border-none border-green-700/10">
+            <h2 className="text-2xl font-[Playfair_Display] text-green-300">{s[0]}</h2>
+            <p className="text-[10px] text-white/50 uppercase">{s[1]}</p>
           </div>
         ))}
       </div>
 
-      {/* LISTINGS HEADER */}
-      <section className="px-4 md:px-12 py-10 md:py-16 pb-0">
-        <p className="text-[9px] md:text-[10px] text-yellow-500 tracking-[4px] uppercase mb-2 md:mb-3">
-          Available Now
-        </p>
-        <h2 className="text-2xl md:text-4xl font-serif font-bold">Featured Listings</h2>
-        <div className="w-12 h-[2px] bg-yellow-500 mt-3 md:mt-4 mb-6 md:mb-10"></div>
+      {/* LISTINGS */}
+      <section className="px-4 md:px-12 py-12">
+        <h2 className="font-[Playfair_Display] text-3xl mb-6">Featured Listings</h2>
+
+        <div className="grid md:grid-cols-3 gap-2">
+          
+          {/* MAIN */}
+          <div className="md:col-span-2 bg-[#14361a]">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900" className="h-[300px] w-full object-cover"/>
+            <div className="p-4">
+              <h3>Emerald Heights Estate</h3>
+              <p className="text-green-300">₦85M</p>
+            </div>
+          </div>
+
+          {/* SIDE */}
+          <div className="flex flex-col gap-2">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600"/>
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600"/>
+          </div>
+
+        </div>
       </section>
 
-      {/* LISTINGS */}
-      <div className="px-4 md:px-12 pb-10 md:pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px]">
-
-          {/* FEATURED */}
-          <div className="md:col-span-2 bg-[#162d50] group">
-            <div className="relative h-[240px] md:h-[340px] overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85&fit=crop"
-                className="w-full h-full object-cover group-hover:scale-105 transition"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#060e1a]/80 to-transparent"></div>
-              <div className="absolute top-4 left-4 bg-yellow-500 text-[#060e1a] text-[9px] px-3 py-1 font-bold tracking-[2px]">
-                Featured
-              </div>
-            </div>
-
-            <div className="p-4 md:p-5 border-t border-yellow-700/10">
-              <h3 className="text-yellow-200 font-serif font-bold">Emerald Heights Estate</h3>
-              <p className="text-yellow-500/60 text-xs mb-2">📍 Rumuola, Port Harcourt</p>
-              <p className="text-yellow-500 font-serif text-lg md:text-xl font-bold mb-2">
-                ₦85,000,000
-              </p>
-              <div className="flex flex-wrap gap-3 text-xs text-white/50">
-                <span>4 Bedrooms</span>
-                <span>3 Bathrooms</span>
-                <span>320 sqm</span>
-                <span>Pool & Garden</span>
-              </div>
-            </div>
-          </div>
-
-          {/* SIDE LISTINGS */}
-          <div className="flex flex-col gap-[2px]">
-            {[
-              {
-                name: "Cruize Tower Residences",
-                badge: "New",
-                img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&fit=crop",
-                price: "₦120,000,000",
-              },
-              {
-                name: "Palm Grove Villas",
-                badge: "Off-Plan",
-                img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80&fit=crop",
-                price: "₦55,000,000",
-              },
-            ].map((item) => (
-              <div key={item.name} className="bg-[#162d50] group">
-                <div className="relative h-[200px] md:h-[220px] overflow-hidden">
-                  <img src={item.img} className="w-full h-full object-cover group-hover:scale-105 transition" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#060e1a]/80 to-transparent"></div>
-                  <div className="absolute top-4 left-4 bg-yellow-500 text-[#060e1a] text-[9px] px-3 py-1 font-bold">
-                    {item.badge}
-                  </div>
-                </div>
-
-                <div className="p-4 md:p-5 border-t border-yellow-700/10">
-                  <h3 className="text-yellow-200 font-serif font-bold">{item.name}</h3>
-                  <p className="text-yellow-500 font-bold">{item.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* CONSTRUCTION */}
+      <section className="grid md:grid-cols-2">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900" className="h-full object-cover"/>
+        <div className="p-8 bg-[#0d2410]">
+          <h2 className="font-[Playfair_Display] text-2xl">Built by Professionals</h2>
+          <ul className="mt-4 space-y-3 text-white/70 text-sm">
+            <li>✔ Certified engineers</li>
+            <li>✔ Premium materials</li>
+            <li>✔ Weekly updates</li>
+            <li>✔ Safety compliance</li>
+          </ul>
         </div>
-      </div>
+      </section>
+
+      {/* SITE STRIP */}
+      <section className="relative h-[350px]">
+        <img src="https://images.unsplash.com/photo-1590418606746-018840f9cd0f?w=1600" className="w-full h-full object-cover brightness-50"/>
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
+          <h2 className="text-3xl font-[Playfair_Display]">
+            See Your <span className="text-green-300">Future Home</span>
+          </h2>
+          <button className="mt-4 bg-green-700 px-6 py-3 text-xs">
+            Schedule Visit
+          </button>
+        </div>
+      </section>
 
       {/* TEAM */}
-      <section className="px-4 md:px-12 py-10 md:py-16">
-        <h2 className="text-2xl md:text-4xl font-serif mb-6 md:mb-10">
-          Meet Our Experts
-        </h2>
+      <section className="px-4 md:px-12 py-12">
+        <h2 className="font-[Playfair_Display] text-3xl mb-6">Meet Our Experts</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {[
-            {
-              name: "Emeka Okafor",
-              img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=85&fit=crop",
-            },
-            {
-              name: "Amaka Eze",
-              img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=85&fit=crop",
-            },
-            {
-              name: "Chidi Nwosu",
-              img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=85&fit=crop",
-            },
-            {
-              name: "Ngozi Adeyemi",
-              img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=85&fit=crop",
-            },
-          ].map((member) => (
-            <div key={member.name} className="bg-[#0e1f38] group">
-              <div className="relative h-[200px] md:h-[280px] overflow-hidden">
-                <img
-                  src={member.img}
-                  className="w-full h-full object-cover object-top grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060e1a]/90 to-transparent"></div>
-              </div>
-              <div className="p-4 border-t-2 border-yellow-500 text-center">
-                <h3 className="text-yellow-200">{member.name}</h3>
+            ["Emeka", "https://images.unsplash.com/photo-1560250097-0b93528c311a"],
+            ["Amaka", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"],
+            ["Chidi", "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"],
+            ["Ngozi", "https://images.unsplash.com/photo-1494790108377-be9c29b29330"],
+          ].map((p, i) => (
+            <div key={i}>
+              <img src={`${p[1]}?w=500`} className="h-[250px] w-full object-cover"/>
+              <div className="p-3 bg-[#0d2410]">
+                <h3>{p[0]}</h3>
+                <p className="text-xs text-green-300">Team Member</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* FOOTER */}
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
+      {/* INSTAGRAM CTA */}
+      <section className="flex flex-col md:flex-row items-center justify-between gap-6 px-6 md:px-12 py-10 bg-[#0d2410] border-y border-green-700/20">
+        <div>
+          <h3 className="font-[Playfair_Display] text-xl">Follow Us on Instagram</h3>
+          <p className="text-sm text-white/60">@landmarkrealestatedevelopers</p>
+        </div>
 
-      <footer className="flex flex-col md:flex-row justify-between px-4 md:px-12 py-6 md:py-8 bg-[#020810] text-xs">
-        <p className="text-white/25 text-center md:text-left">
-          © 2026 Landmark Real Estate Developers · Port Harcourt
-        </p>
-        <p className="text-yellow-500/50 text-center md:text-right">
-          +234 803 000 0000 · info@landmarkrealestatedevelopers@gmail.com
-        </p>
+        <a
+          href="https://www.instagram.com/landmarkrealestatedevelopers"
+          target="_blank"
+          className="bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-3 text-xs"
+        >
+          Follow
+        </a>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="grid md:grid-cols-3 text-xs px-6 md:px-12 py-6 bg-black border-t border-green-700/20">
+        <div>© 2026 Land Mark Real Estate</div>
+        <div className="text-center">@landmarkrealestatedevelopers</div>
+        <div className="text-right">info@landmarkrealestate.ng</div>
       </footer>
 
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
