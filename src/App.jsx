@@ -270,7 +270,7 @@ function App() {
           © 2026 Landmark Real Estate Developers · Port Harcourt, Rivers State, Nigeria
         </div>
         <div className="text-yellow-500/50">
-          +234 803 000 0000 · info@cruizerealestate.com · www.cruizerealestate.com
+          +234 803 000 0000 · info@landmarkrealestatedevelopers@gmail.com
         </div>
       </footer>
 
