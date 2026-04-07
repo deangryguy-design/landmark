@@ -35,14 +35,7 @@ function App() {
           <a href="#">Rent</a>
           <a href="#">Invest</a>
 
-          <a
-            href="https://www.instagram.com/landmarkrealestatedevelopers"
-            target="_blank"
-            className="border border-green-400/30 px-3 py-2 flex items-center gap-2 hover:bg-green-800/30"
-          >
-            Instagram
-          </a>
-
+          
           <a className="bg-green-700 px-4 py-2 hover:bg-green-500">
             Book a Visit
           </a>
